@@ -1,0 +1,123 @@
+/* Reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Root Variables */
+:root {
+  --color-blue: #234894;
+  --color-black: #1e1e1e;
+  --color-gray: #696969;
+  --color-btn: #219f95;
+  --color-blue-light: #afcedd;
+  --border-radius: 8px;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  color: var(--color-black);
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+/* heading */
+.heading {
+  margin: 0 2rem;
+  padding: 1.7rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+/* Requests container*/
+.requests {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+}
+.request-box {
+  padding: 1.7rem;
+}
+@media screen and (min-width: 640px) {
+  .requests {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .requests {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Requests Box Header */
+.request-box__header {
+  display: flex;
+  justify-content: space-between;
+  /* min-width: 288px; */
+}
+.right-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.number {
+  color: var(--color-blue);
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-blue-light);
+  border-radius: var(--border-radius);
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text {
+  text-wrap: nowrap;
+}
+.date {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--color-gray);
+}
+/* Requests Body Section */
+.request-box__body {
+  line-height: 2;
+}
+.request-type {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.request-id {
+  color: var(--color-gray);
+  font-size: 1.2rem;
+}
+/* Requests Footer */
+.request-box__footer {
+  display: flex;
+  justify-content: space-between;
+}
+.request-box__image {
+  border-radius: var(--border-radius);
+}
+.request-box__name {
+  text-wrap: nowrap;
+}
+.request-box__btn {
+  padding: 2.2rem 1.5rem;
+  font-size: 1.6rem;
+  background-color: var(--color-btn);
+  color: #fff;
+  border-radius: var(--border-radius);
+  text-wrap: nowrap;
+  border: 0;
+}
